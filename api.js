@@ -4,7 +4,7 @@ const Customers = require('../appmodels/customers');
 
 router.get('/customers', function(req, res, showerror){
     Customers.find({}).then(function(customers){
-        res.send(customers);
+        res.send(customers).catch(showerror);
     });
 });
 router.post('/customers', function(req, res, showerror){
