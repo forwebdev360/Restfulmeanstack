@@ -10,3 +10,8 @@ Express.js
 Angularjs 2
 Node.js
 
+Additional packages used
+
+bodyParser
+nodemon
+

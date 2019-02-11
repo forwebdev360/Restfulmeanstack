@@ -1,6 +1,6 @@
 // Import express in our app
 const express = require('express');
-
+const path = require('path');
 const bodyParser = require('body-parser');
 
 const mongoose = require('mongoose');
@@ -13,6 +13,7 @@ mongoose.connect('mongodb://localhost/customers');
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, './client')));
 
 //Starting our routes for our app
 app.use('/api',require('./routes/api'));
